@@ -5,7 +5,7 @@
 const SUPABASE_URL = process.env.VITE_SUPABASE_URL;
 const SUPABASE_KEY = process.env.VITE_SUPABASE_ANON_KEY;
 const RESEND_KEY   = process.env.RESEND_API_KEY;
-const EMAIL_TO     = 'marcos@grupoengenho.com.br';
+const EMAIL_TO     = 'marcos.grupoengenho@gmail.com';
 const EMAIL_FROM   = 'onboarding@resend.dev';
 
 const DIMENSIONS = [
