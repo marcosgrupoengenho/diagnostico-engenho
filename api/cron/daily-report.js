@@ -6,7 +6,7 @@ const SUPABASE_URL = process.env.VITE_SUPABASE_URL;
 const SUPABASE_KEY = process.env.VITE_SUPABASE_ANON_KEY;
 const RESEND_KEY   = process.env.RESEND_API_KEY;
 const EMAIL_TO     = 'marcos@grupoengenho.com.br';
-const EMAIL_FROM   = 'diagnostico@grupoengenho.com.br'; // domínio verificado no Resend
+const EMAIL_FROM   = 'onboarding@resend.dev'; // domínio verificado no Resend
 
 // ─── Dimensões do questionário ────────────────────────────────────────────────
 const DIMENSIONS = [
