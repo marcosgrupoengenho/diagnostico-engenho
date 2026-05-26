@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm create:*)",
+      "Read(//usr/local/bin/**)",
+      "Read(//usr/bin/**)",
+      "Read(//c/Program Files/**)",
+      "Read(//c/Users/marco/AppData/Roaming/**)",
+      "Bash(cmd.exe /c \"node --version && npm --version\")",
+      "Bash(cmd.exe /c \"where node\")",
+      "Bash(cmd.exe /c \"where npm\")",
+      "Bash(cmd.exe /c \"cd \\\\\"C:\\\\Users\\\\marco\\\\OneDrive\\\\GE_INTELIGÊNCIA_ARTIFICIAL\\\\_PROJETOS IA\\\\Time Track\\\\timetrack\\\\\" && npm install\")",
+      "Bash(cmd.exe /c \"npm --version\")",
+      "Read(//c/Users/marco/AppData/Local/Programs/**)",
+      "Read(//c//**)",
+      "Read(//c/Users/marco/**)",
+      "Bash(export PATH=\"/c/Program Files/nodejs:$PATH\")",
+      "Bash(npm install:*)",
+      "Bash(npm run:*)"
+    ]
+  }
+}

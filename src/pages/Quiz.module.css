@@ -1,0 +1,136 @@
+.wrap {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+  background: var(--surface);
+}
+
+.inner {
+  max-width: 600px;
+  width: 100%;
+}
+
+.progressWrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 2.5rem;
+}
+
+.progressBar {
+  flex: 1;
+  height: 3px;
+  background: var(--border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: var(--green);
+  border-radius: 2px;
+  transition: width 0.4s cubic-bezier(0.22,1,0.36,1);
+}
+
+.progressLabel {
+  font-size: 13px;
+  color: var(--ink-60);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.qCard {
+  animation: fadeUp 0.4s cubic-bezier(0.22,1,0.36,1) both;
+  margin-bottom: 2rem;
+}
+
+.dimTag {
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--green-dark);
+  margin-bottom: 0.75rem;
+}
+
+.qText {
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 3vw, 1.65rem);
+  line-height: 1.3;
+  color: var(--ink);
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.01em;
+}
+
+.qHint {
+  font-size: 14px;
+  color: var(--ink-60);
+  margin-bottom: 1.75rem;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+  text-align: left;
+  transition: border-color 0.15s, background 0.15s, transform 0.1s;
+  width: 100%;
+}
+
+.option:hover {
+  border-color: var(--border-strong);
+  background: var(--ink-10);
+}
+
+.option.selected {
+  border-color: var(--green);
+  background: var(--green-light);
+}
+
+.option.selected:hover { background: #d3ede5; }
+
+.optNum {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid var(--border-strong);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink-60);
+  flex-shrink: 0;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.selected .optNum {
+  background: var(--green);
+  border-color: var(--green);
+  color: white;
+}
+
+.optLabel {
+  font-size: 14px;
+  color: var(--ink);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}

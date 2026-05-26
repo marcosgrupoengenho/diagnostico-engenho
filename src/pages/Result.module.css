@@ -1,0 +1,307 @@
+.wrap {
+  background: var(--surface);
+  min-height: 100vh;
+  padding: 3rem 1.5rem;
+}
+
+.inner {
+  max-width: 680px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.inner > * {
+  animation: fadeUp 0.5s cubic-bezier(0.22,1,0.36,1) both;
+}
+
+/* Hero */
+.hero { text-align: center; }
+
+.leadName {
+  font-size: 13px;
+  color: var(--ink-60);
+  margin-bottom: 1.5rem;
+}
+.leadName strong { font-weight: 500; color: var(--ink); }
+
+.scoreCircle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+
+.scoreNum { font-size: 30px; font-weight: 500; line-height: 1; }
+.scoreSub { font-size: 11px; color: var(--ink-60); margin-top: 2px; }
+
+.profileBadge {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: 50px;
+  margin-bottom: 1rem;
+}
+
+.heroTitle {
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 3.5vw, 1.9rem);
+  color: var(--ink);
+  margin-bottom: 0.75rem;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+.heroIntro {
+  font-size: 15px;
+  color: var(--ink-60);
+  line-height: 1.7;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* Sections */
+.section {}
+
+.sectionTitle {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--ink);
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 1.25rem;
+}
+
+/* Dim grid */
+.dimGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+@media (max-width: 480px) {
+  .dimGrid { grid-template-columns: 1fr; }
+}
+
+.dimCard {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  transition: border-color 0.15s;
+}
+
+.dimCard.crit {
+  border-color: #D85A30;
+  background: #FAECE7;
+}
+
+.dimCard.good {
+  border-color: var(--green);
+  background: var(--green-light);
+}
+
+.dimHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.dimName {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--ink);
+}
+.crit .dimName { color: #993C1D; }
+.good .dimName { color: var(--green-dark); }
+
+.dimScore { font-size: 12px; font-weight: 500; }
+
+.dimBarBg {
+  height: 4px;
+  background: var(--border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.dimBarFill {
+  height: 4px;
+  border-radius: 2px;
+  transition: width 0.8s cubic-bezier(0.22,1,0.36,1);
+}
+
+.dimNote {
+  font-size: 11px;
+  color: #993C1D;
+  margin-top: 8px;
+  line-height: 1.45;
+}
+
+/* Pain cards */
+.painList { display: flex; flex-direction: column; gap: 10px; }
+
+.painCard {
+  border: 0.5px solid var(--color-border-tertiary);
+  border-left: 3px solid var(--coral);
+  border-radius: 0 var(--border-radius-lg) var(--border-radius-lg) 0;
+  padding: 16px 18px;
+  margin-bottom: 12px;
+  background: var(--color-background-primary);
+}
+
+.painDim {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  margin-bottom: 12px;
+}
+
+.painText {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+
+.painLabel {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 2px 9px;
+  border-radius: 4px;
+  margin-bottom: 6px;
+}
+
+.painLabelDor {
+  background: #FAECE7;
+  color: #993C1D;
+}
+
+.painLabelSol {
+  background: #E1F5EE;
+  color: #085041;
+}
+
+.painLabelTens {
+  background: #F2F1EC;
+  color: #5F5E5A;
+}
+
+/* CTA box */
+.ctaBox {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  background: white;
+}
+
+.ctaTitle {
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
+  color: var(--ink);
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.01em;
+}
+
+.ctaSub {
+  font-size: 14px;
+  color: var(--ink-60);
+  line-height: 1.65;
+  margin-bottom: 1.5rem;
+}
+
+.ctaOptions { display: flex; flex-direction: column; gap: 10px; }
+
+.ctaMain, .ctaSecondary {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  transition: all 0.15s;
+}
+
+.ctaMain {
+  background: var(--green-light);
+  border: 1.5px solid var(--green);
+}
+.ctaMain:hover { background: #cdeee4; border-color: var(--green-dark); }
+
+.ctaSecondary {
+  background: white;
+  border: 1px solid var(--border);
+}
+.ctaSecondary:hover { background: var(--ink-10); border-color: var(--border-strong); }
+
+.ctaIconWrap {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.ctaBody { flex: 1; display: flex; flex-direction: column; gap: 3px; }
+
+.ctaOptionTitle {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.ctaOptionSub {
+  font-size: 12px;
+  color: var(--ink-60);
+  line-height: 1.4;
+}
+
+.badge {
+  font-size: 10px;
+  background: var(--green);
+  color: white;
+  padding: 2px 8px;
+  border-radius: 50px;
+  font-weight: 500;
+}
+
+.painText + .painText {
+  margin-top: 8px;
+}
+
+.painHook {
+  margin-top: 4px;
+  padding: 11px 14px;
+  background: #E6F1FB;
+  border-radius: var(--border-radius-md);
+  font-size: 13px;
+  font-weight: 500;
+  font-style: italic;
+  color: #0C447C;
+  border: 0.5px solid #B5D4F4;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.painHook:hover {
+  background: #D0E6F7;
+  border-color: #8BBDE8;
+}
