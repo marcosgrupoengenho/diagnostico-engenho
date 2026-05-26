@@ -231,7 +231,7 @@ export default async function handler(req, res) {
   // Busca leads das últimas 24h
   const since = new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString();
   const sbRes = await fetch(
-    `${SUPABASE_URL}/rest/v1/leads?select=*&created_at=gte.${since}&order=created_at.desc`,
+    `${SUPABASE_URL}/rest/v1/leads?select=*&order=created_at.desc&limit=10`,
     { headers: { 'apikey': SUPABASE_KEY, 'Authorization': `Bearer ${SUPABASE_KEY}` } }
   );
 
